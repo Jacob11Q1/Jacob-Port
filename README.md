@@ -21,9 +21,12 @@ This site is the primary sales asset for Jacob's freelance web development work:
 - **FAQ accordion** — native `<details>`/`<summary>`, no JS required, fully accessible
 - **Contact form** — client-side validated, submits via [FormSubmit](https://formsubmit.co) AJAX (no backend needed)
 - **Custom cursor, magnetic buttons, scroll-reveal animations** — desktop-only, degrade gracefully on touch
+- **Testimonials section** — ready to go live once real client quotes replace the placeholder copy (see [Customizing](#customizing))
+- **Long-form case study** — `case-study-sanctishell.html`, a standalone article linked from the SanctiShell project modal, for SEO depth
 - **Fully responsive** — breakpoints at 1100 / 1080 / 900 / 768 / 600 / 480px
 - **Accessible by default** — semantic landmarks, ARIA labels, `prefers-reduced-motion` support
-- **SEO-ready** — Open Graph, Twitter Card, JSON-LD `Person` schema, canonical URL, sitemap
+- **SEO-ready** — Open Graph, Twitter Card, JSON-LD `Person` schema, canonical URL, sitemap, branded OG banner
+- **Three.js perf-aware** — hero render loop pauses via `IntersectionObserver` when scrolled out of view
 
 ## Tech Stack
 
@@ -44,15 +47,18 @@ No package manager, no build step — open `index.html` and it runs.
 
 ```
 .
-├── index.html          # All markup — single page, sections in DOM order
+├── index.html                     # All markup — single page, sections in DOM order
+├── case-study-sanctishell.html     # Standalone long-form case study article
+├── og-banner-generator.html        # Dev tool: renders/exports the OG banner (not linked from the site)
 ├── css/
-│   └── styles.css       # All styles, numbered section comments (1. Design Tokens → 32. FAQ)
+│   └── styles.css                   # All styles, numbered section comments (1. Design Tokens → 33. Testimonials)
 ├── js/
-│   └── main.js           # All behavior, one init function per feature (see file header)
+│   └── main.js                       # All behavior, one init function per feature (see file header)
 ├── assets/
 │   ├── favicon.svg
+│   ├── og-image.png                  # Branded 1200×530 social-share banner
 │   ├── Jacob.jpg
-│   └── *.png              # Project screenshots (IronPulse, SanctiShell, Wij Al Amar, Zuwadeh)
+│   └── *.png                          # Project screenshots (IronPulse, SanctiShell, Wij Al Amar, Zuwadeh)
 ├── sitemap.xml
 └── README.md
 ```
@@ -61,12 +67,13 @@ No package manager, no build step — open `index.html` and it runs.
 
 1. **Hero** — headline, positioning statement, primary CTAs
 2. **Services** — 3 core offerings (Web Development, SEO, Web Design)
-3. **Projects** — case-study cards, click to open a modal (data lives in `js/main.js` → `projectsData`)
-4. **Pricing** — Starter / Premium tiers with a live currency switcher
-5. **Skills** — animated proficiency bars, grouped by Frontend / Backend / Tools
-6. **About** — bio, stats counters, code-style profile card
-7. **FAQ** — accordion covering process, timeline, payment, support, and remote work
-8. **Contact** — validated form (FormSubmit) + direct booking, email, and WhatsApp links
+3. **Projects** — case-study cards, click to open a modal (data lives in `js/main.js` → `projectsData`); the SanctiShell card links out to a full write-up
+4. **Testimonials** — client quotes (currently placeholder copy, see [Customizing](#customizing))
+5. **Pricing** — Starter / Premium tiers with a live currency switcher
+6. **Skills** — animated proficiency bars, grouped by Frontend / Backend / Tools
+7. **About** — bio, stats counters, code-style profile card
+8. **FAQ** — accordion covering process, timeline, payment, support, and remote work
+9. **Contact** — validated form (FormSubmit) + direct booking, email, and WhatsApp links
 
 ## Running Locally
 
@@ -85,11 +92,14 @@ Then open the printed local URL. Opening `index.html` directly via `file://` wil
 | What | Where |
 |---|---|
 | Project case studies | `js/main.js` → `projectsData` array (top of file) |
+| **Testimonials (real quotes)** | `index.html` → `#testimonials` — replace the placeholder quote, name, and role in each `.testimonial-card`, and swap the `?` avatar span for the client's initial |
 | Pricing tiers & currency rates | `index.html` → `#pricing`, and `js/main.js` → `initCurrencyConverter()` |
 | FAQ questions | `index.html` → `#faq` section (`<details>` blocks) |
 | Contact form destination email | `js/main.js` → the `fetch('https://formsubmit.co/ajax/...')` call |
 | Booking link | Any `https://cal.com/jacob-qumsiyeh-czrzyt` href across the file |
 | Colors / spacing / motion | `css/styles.css` → `:root` design tokens at the top |
+| OG/social banner | Open `og-banner-generator.html` locally, edit the canvas-drawing script, screenshot/export, save over `assets/og-image.png` |
+| Analytics | `index.html` `<head>` — uncomment the Cloudflare Web Analytics `<script>` and paste your beacon token (see comment above it for the 3-step setup) |
 
 ## Deployment
 
@@ -101,8 +111,9 @@ When shipping changes to `css/styles.css` or `js/main.js`, bump the `?v=` query 
 
 - `robots.txt` — managed at the hosting/CDN layer (Cloudflare)
 - `sitemap.xml` — at the repo root, submit to Google Search Console after deploying
-- Open Graph / Twitter Card meta — in `index.html` `<head>`, image currently points at `assets/Jacob.jpg`; swap in a dedicated 1200×630 branded banner when one is designed
+- Open Graph / Twitter Card meta — in `index.html` `<head>`, pointing at `assets/og-image.png` (regenerate via `og-banner-generator.html`)
 - JSON-LD `Person` schema — keep `sameAs` links in sync with active social profiles
+- Analytics — Cloudflare Web Analytics hook is in place but commented out; needs a beacon token from your own Cloudflare dashboard to activate (see the `<head>` comment in `index.html`)
 
 ## License
 

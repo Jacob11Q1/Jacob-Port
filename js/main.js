@@ -57,6 +57,7 @@ const projectsData = [
     description: 'SanctiShell is a custom-built eCommerce platform for a Bethlehem artisan business. It replaced expensive third-party platforms with a fully owned store, saving recurring costs and giving complete control.',
     tech: ['PHP 8.2', 'MySQL', 'JavaScript', 'CSS3'],
     url: 'https://sanctishell.com/',
+    caseStudyUrl: 'case-study-sanctishell.html',
     problem: 'The client needed to sell handcrafted Mother-of-Pearl items online, but Shopify and similar platforms meant ongoing fees, limited customisation, and no real ownership of the storefront.',
     solution: 'Built a fully custom eCommerce platform with product listings, a shopping cart, and a streamlined checkout. Completely owned and tailored to the client\'s brand with no monthly fees.',
     design: 'Clean, product-focused layout that keeps the craftsmanship centre stage. Simple navigation guides customers from discovery to purchase without friction or distraction.',
@@ -680,6 +681,16 @@ function openModal(id) {
   const link = $('#modal-link');
   link.href = p.url;
   link.style.display = p.url === '#' ? 'none' : 'inline-flex';
+
+  const caseStudyLink = $('#modal-case-study-link');
+  if (caseStudyLink) {
+    if (p.caseStudyUrl) {
+      caseStudyLink.href = p.caseStudyUrl;
+      caseStudyLink.style.display = 'inline-flex';
+    } else {
+      caseStudyLink.style.display = 'none';
+    }
+  }
 
   /* Open */
   modal.classList.add('open');

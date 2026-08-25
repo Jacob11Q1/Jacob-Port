@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#222}</style>
+</head>
+<body>
+<canvas id="c" width="1200" height="530"></canvas>
+<script>
+async function draw() {
+  await document.fonts.load('900 76px Inter');
+  await document.fonts.load('700 30px Inter');
+  await document.fonts.load('600 26px Inter');
+  await document.fonts.load('700 22px "JetBrains Mono"');
+  await document.fonts.ready;
+
+  const cv = document.getElementById('c');
+  const ctx = cv.getContext('2d');
+  const W = 1200, H = 530;
+  const red = '#e63946';
+
+  // Background
+  ctx.fillStyle = '#0a0a0a';
+  ctx.fillRect(0, 0, W, H);
+
+  // Radial red glow, top-right (matches hero vignette feel)
+  const grad = ctx.createRadialGradient(1000, 120, 0, 1000, 120, 620);
+  grad.addColorStop(0, 'rgba(230,57,70,0.20)');
+  grad.addColorStop(1, 'rgba(230,57,70,0)');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, W, H);
+
+  // Faint dot-grid network texture (brand consistency with hero canvas)
+  ctx.strokeStyle = 'rgba(230,57,70,0.10)';
+  ctx.lineWidth = 1;
+  const pts = [];
+  let seed = 42;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  for (let i = 0; i < 26; i++) {
+    pts.push({ x: 650 + rnd() * 520, y: 30 + rnd() * 470 });
+  }
+  for (let i = 0; i < pts.length; i++) {
+    for (let j = i + 1; j < pts.length; j++) {
+      const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
+      if (dx * dx + dy * dy < 130 * 130) {
+        ctx.beginPath();
+        ctx.moveTo(pts[i].x, pts[i].y);
+        ctx.lineTo(pts[j].x, pts[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+  ctx.fillStyle = 'rgba(230,57,70,0.35)';
+  pts.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, 2, 0, Math.PI * 2); ctx.fill(); });
+
+  // "JQ" mark, top-left
+  ctx.fillStyle = red;
+  ctx.font = "700 28px 'JetBrains Mono', monospace";
+  ctx.textBaseline = 'alphabetic';
+  ctx.fillText('JQ', 80, 74);
+
+  // Eyebrow pill
+  ctx.strokeStyle = 'rgba(230,57,70,0.45)';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.roundRect(80, 100, 300, 34, 17);
+  ctx.stroke();
+  ctx.fillStyle = red;
+  ctx.beginPath();
+  ctx.arc(98, 117, 3, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.font = "600 14px Inter, sans-serif";
+  ctx.fillStyle = red;
+  ctx.fillText('FULL STACK DEVELOPER', 112, 122);
+
+  // Headline
+  ctx.fillStyle = '#f2f2f2';
+  ctx.font = "900 60px Inter, sans-serif";
+  ctx.fillText('Jacob Qumsiyeh', 78, 225);
+
+  ctx.fillStyle = red;
+  ctx.font = "800 38px Inter, sans-serif";
+  ctx.fillText('I Build Websites', 80, 285);
+  ctx.fillText('That Win You Clients', 80, 330);
+
+  // Subtitle
+  ctx.fillStyle = '#8a8a8a';
+  ctx.font = "500 20px Inter, sans-serif";
+  ctx.fillText('Fast, modern, SEO-optimized websites for freelance', 80, 385);
+  ctx.fillText('developers and small businesses.', 80, 412);
+
+  // Bottom URL bar
+  ctx.strokeStyle = 'rgba(255,255,255,0.11)';
+  ctx.beginPath();
+  ctx.moveTo(80, 455);
+  ctx.lineTo(1120, 455);
+  ctx.stroke();
+  ctx.fillStyle = '#c0c0c0';
+  ctx.font = "600 20px 'JetBrains Mono', monospace";
+  ctx.fillText('jacobqum.dev', 80, 490);
+
+  window.__done = true;
+}
+draw();
+</script>
+</body>
+</html>

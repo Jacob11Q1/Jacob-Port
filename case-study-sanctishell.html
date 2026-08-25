@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>How I Built SanctiShell: A Fee-Free eCommerce Store | Jacob Qumsiyeh</title>
+  <meta name="description"
+    content="A case study on building SanctiShell, a fully custom eCommerce platform for a Bethlehem artisan business — replacing Shopify fees with a fully owned storefront.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jacobqum.dev/case-study-sanctishell.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jacobqum.dev/case-study-sanctishell.html">
+  <meta property="og:title" content="How I Built SanctiShell: A Fee-Free eCommerce Store">
+  <meta property="og:description"
+    content="A case study on building a fully custom eCommerce platform for a Bethlehem artisan business — zero platform fees, complete ownership.">
+  <meta property="og:image" content="https://jacobqum.dev/assets/SanctiShell.png">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css?v=19">
+
+  <style>
+    .article {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: calc(var(--nav-h) + 64px) var(--section-px) 100px;
+    }
+
+    .article-back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--grey-mid);
+      font-size: var(--text-sm);
+      margin-bottom: 32px;
+      transition: color 0.2s;
+    }
+
+    .article-back:hover {
+      color: var(--red);
+    }
+
+    .article-category {
+      color: var(--red);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin: 14px 0 18px;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 16px;
+      color: var(--grey-mid);
+      font-size: var(--text-sm);
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .article-hero-img {
+      width: 100%;
+      border-radius: var(--r-lg);
+      border: 1px solid var(--border);
+      margin-bottom: 48px;
+    }
+
+    .article-body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 48px 0 16px;
+    }
+
+    .article-body p {
+      color: var(--grey);
+      line-height: 1.8;
+      margin-bottom: 18px;
+      font-size: var(--text-lg);
+    }
+
+    .article-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 24px 0;
+    }
+
+    .article-stack span {
+      padding: 6px 14px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xs);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--grey-mid);
+    }
+
+    .article-cta {
+      margin-top: 56px;
+      padding: 40px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      text-align: center;
+    }
+
+    .article-cta h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .article-cta p {
+      color: var(--grey);
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="nav" id="nav" role="banner">
+    <a href="index.html#hero" class="nav-logo" aria-label="Back to Jacob Qumsiyeh's portfolio">JQ</a>
+    <a href="https://cal.com/jacob-qumsiyeh-czrzyt" target="_blank" rel="noopener noreferrer"
+      class="btn btn-sm btn-primary nav-hire" aria-label="Book a call with Jacob">Hire Me</a>
+  </header>
+
+  <main class="article">
+    <a href="index.html#projects" class="article-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>
+      <span>Back to Portfolio</span>
+    </a>
+
+    <span class="article-category">Case Study &middot; eCommerce</span>
+    <h1 class="article-title">How I Built SanctiShell: A Fully-Owned, Fee-Free eCommerce Store</h1>
+    <div class="article-meta">
+      <span>Jacob Qumsiyeh</span>
+      <span>&middot;</span>
+      <span>~4 min read</span>
+    </div>
+
+    <img class="article-hero-img" src="assets/SanctiShell.png" alt="SanctiShell eCommerce platform homepage" loading="lazy">
+
+    <div class="article-body">
+      <h2>The Challenge</h2>
+      <p>A Bethlehem-based artisan needed to sell handcrafted Mother-of-Pearl items online. The obvious route was
+        Shopify or a similar hosted platform — fast to launch, but with ongoing monthly fees, transaction cuts, and
+        real limits on customization. For a small, craft-focused business, those recurring costs eat directly into
+        margins on every sale, and the storefront never truly belongs to the business, just to the platform.</p>
+
+      <h2>The Approach</h2>
+      <p>Instead of building on top of a third-party platform, I built SanctiShell as a fully custom eCommerce
+        application from the ground up: product listings, a shopping cart, and a streamlined checkout, all owned
+        outright by the client with no monthly subscription and no per-sale platform fee.</p>
+      <p>That decision changes the economics of the business permanently — every future sale keeps its full margin
+        instead of feeding a platform's cut, and the client can extend or modify the store however the business
+        grows, without waiting on a third-party's feature roadmap or pricing changes.</p>
+
+      <h2>Design Thinking</h2>
+      <p>The interface stays clean and product-focused, keeping the craftsmanship front and center rather than
+        burying it under unnecessary UI. Navigation is simple by design, so customers move from discovery to
+        purchase without friction — every screen exists to answer one question: does this help someone buy?</p>
+
+      <h2>The Result</h2>
+      <p>SanctiShell launched as a fully functional, fee-free storefront that gives the client complete control over
+        products, pricing, and the customer experience, with zero platform dependency and zero recurring platform
+        fees eating into their margins.</p>
+
+      <h2>Tech Stack</h2>
+      <div class="article-stack">
+        <span>PHP 8.2</span>
+        <span>MySQL</span>
+        <span>JavaScript</span>
+        <span>CSS3</span>
+      </div>
+
+      <div class="article-cta">
+        <h3>Need a store that's actually yours?</h3>
+        <p>If recurring platform fees are cutting into your margins, let's talk about what a fully-owned storefront
+          would look like for your business.</p>
+        <a href="https://cal.com/jacob-qumsiyeh-czrzyt" target="_blank" rel="noopener noreferrer"
+          class="btn btn-primary btn-lg">
+          <span>Book a Free 30-Min Initial Call</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none; padding-top:0;">
+        <p class="footer-copy">
+          &copy; 2026 Jacob Qumsieh.
+          <span class="footer-copy-sep" aria-hidden="true">&middot;</span>
+          <a href="index.html#hero" style="color:var(--grey-mid)">Back to jacobqum.dev</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cloudflare Web Analytics — see index.html <head> for setup steps -->
+  <!--
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script>
+  -->
+
+</body>
+
+</html>

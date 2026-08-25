@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ SEO: Core Meta ═══════════════════════════════════════ -->
+  <title>Jacob Qumsiyeh | Full Stack Developer &amp; Web Designer</title>
+  <meta name="description"
+    content="Jacob Qumsiyeh is a Full Stack Developer and Web Designer building fast, high-converting websites with React, Node.js, and WordPress. Available for freelance projects worldwide.">
+  <meta name="keywords"
+    content="Jacob Qumsiyeh, Full Stack Developer, Web Designer, React Developer, Node.js Developer, WordPress Developer, Freelance Web Developer, SEO Web Design, High-Performance Websites">
+  <meta name="author" content="Jacob Qumsieh">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jacobqum.dev/">
+
+  <!-- ═══ Favicon ══════════════════════════════════════════════ -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" href="assets/favicon.svg">
+
+  <!-- ═══ SEO: Open Graph (Facebook / LinkedIn preview) ════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jacobqum.dev/">
+  <meta property="og:title" content="Jacob Qumsiyeh | Full Stack Developer &amp; Web Designer">
+  <meta property="og:description"
+    content="Full Stack Developer building fast, high-converting websites with React, Node.js, and WordPress. Let's grow your business online.">
+  <meta property="og:image" content="https://jacobqum.dev/assets/Jacob.jpg">
+  <meta property="og:site_name" content="Jacob Qumsieh Portfolio">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ═══ SEO: Twitter / Instagram Card ═══════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jacob Qumsiyeh | Full Stack Developer &amp; Web Designer">
+  <meta name="twitter:description"
+    content="Full Stack Developer building fast, high-converting websites with React, Node.js, and WordPress.">
+  <meta name="twitter:image" content="https://jacobqum.dev/assets/Jacob.jpg">
+
+  <!-- ═══ Fonts: Inter (UI) + JetBrains Mono (code) ══════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- ═══ Devicons: colorful skill icons ══════════════════════ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <!-- ═══ Styles ══════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="css/styles.css?v=18">
+
+  <!-- ═══ SEO: JSON-LD Structured Data (Person schema) ════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jacob Qumsieh",
+    "url": "https://jacobqum.dev/",
+    "jobTitle": "Full Stack Developer",
+    "description": "Full Stack Developer specialising in React, Node.js, WordPress, and high-performance web applications.",
+    "email": "mailto:qumsiyeh37@gmail.com",
+    "sameAs": [
+      "https://github.com/Jacob11Q1",
+      "https://www.linkedin.com/in/yacoub-qumseya-9227a2132/",
+      "https://www.instagram.com/jacob.web11/"
+    ],
+    "knowsAbout": ["React", "Node.js", "JavaScript", "WordPress", "TailwindCSS", "Python", "MySQL", "PostgreSQL"]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════
+       PRELOADER
+  ════════════════════════════════════════════════════════ -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-logo">JQ</div>
+      <div class="preloader-track">
+        <div class="preloader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Custom Cursor (desktop only, hidden on touch) ══════ -->
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ══ Scroll Progress Bar ════════════════════════════════ -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════════════════ -->
+  <header class="nav" id="nav" role="banner">
+    <a href="#hero" class="nav-logo" aria-label="Back to top, Jacob Qumsieh">JQ</a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#services" class="nav-link" data-section="services">Services</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#pricing" class="nav-link" data-section="pricing">Pricing</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#faq" class="nav-link" data-section="faq">FAQ</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-sm btn-primary nav-hire magnetic" aria-label="Hire Jacob Qumsieh">
+      Hire Me
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false"
+      aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ══ Mobile Navigation Overlay ═════════════════════════ -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation">&times;</button>
+    <nav class="mobile-nav-links" aria-label="Mobile navigation links">
+      <a href="#services" class="mobile-link"><span class="mobile-link-num">01</span>Services</a>
+      <a href="#projects" class="mobile-link"><span class="mobile-link-num">02</span>Projects</a>
+      <a href="#pricing" class="mobile-link"><span class="mobile-link-num">03</span>Pricing</a>
+      <a href="#skills" class="mobile-link"><span class="mobile-link-num">04</span>Skills</a>
+      <a href="#about" class="mobile-link"><span class="mobile-link-num">05</span>About</a>
+      <a href="#faq" class="mobile-link"><span class="mobile-link-num">06</span>FAQ</a>
+      <a href="#contact" class="mobile-link"><span class="mobile-link-num">07</span>Contact</a>
+    </nav>
+    <div class="mobile-nav-footer">
+      <a href="mailto:qumsiyeh37@gmail.com" class="mobile-nav-email">qumsiyeh37@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════════ -->
+  <section id="hero" class="hero" aria-label="Introduction">
+    <!-- Three.js particle canvas -->
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- Radial vignette to fade canvas edges into black -->
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <!-- Noise texture overlay for premium depth -->
+    <div class="hero-noise" aria-hidden="true"></div>
+
+    <div class="hero-content" data-reveal="hero">
+
+      <!-- Status pill -->
+      <div class="hero-eyebrow">
+        <span class="hero-dot" aria-hidden="true"></span>
+        <span>Hi, I'm Jacob Qumsiyeh</span>
+      </div>
+
+      <!-- Main headline — H1 for SEO -->
+      <h1 class="hero-title">
+        <span class="hero-line hero-first">I Build Websites</span>
+        <span class="hero-line hero-last">That Win You Clients</span>
+      </h1>
+
+      <!-- Positioning statement -->
+      <p class="hero-positioning reveal" style="animation-delay:0.55s">
+        Fast, modern, and SEO-optimized websites designed to grow your business and increase conversions.
+      </p>
+
+      <!-- Professional tagline -->
+      <p class="hero-tagline">
+        From landing pages to full eCommerce platforms, I handle everything end to end, so you can focus on running your
+        business.
+      </p>
+
+      <!-- Primary CTAs -->
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary btn-lg magnetic">
+          <span>View My Work</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17l9.2-9.2M17 17V7H7" />
+          </svg>
+        </a>
+        <a href="https://cal.com/jacob-qumsiyeh-czrzyt" target="_blank" rel="noopener noreferrer"
+          class="btn btn-ghost btn-lg magnetic">
+          <span>Book a Free 30-Min Initial Call</span>
+        </a>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="hero-scroll-cue" aria-hidden="true">
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <!-- Tech Orbit: 11 technologies orbiting in 3D perspective — rendered by initTechOrbit() in main.js -->
+    <div class="tech-orbit" id="tech-orbit" aria-hidden="true">
+      <div class="orbit-stage">
+        <!-- Decorative elliptical guide rings (CSS animated) -->
+        <div class="orbit-guide orbit-guide--1"></div>
+        <div class="orbit-guide orbit-guide--2"></div>
+        <!-- Center identity core -->
+        <div class="orbit-core">
+          <span>Full</span>
+          <span>Stack</span>
+        </div>
+        <!-- .orbit-badge elements injected by initTechOrbit() -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SERVICES
+  ════════════════════════════════════════════════════════ -->
+  <section id="services" class="section services" aria-labelledby="services-heading">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="section-tag" aria-hidden="true">01 / Services</span>
+        <h2 class="section-title" id="services-heading">What I Offer</h2>
+        <p class="section-sub reveal" style="--delay:0.1s">Every service is built around one goal: growing your business
+          online.</p>
+      </header>
+
+      <div class="services-grid">
+
+        <article class="service-card reveal" data-tilt aria-label="Full Stack Development service">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect x="4" y="8" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2" />
+              <path d="M13 22l4-8 4 6 3-4 3 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M10 32h20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="service-number" aria-hidden="true">01</div>
+          <h3 class="service-title">High-Performance Web Development</h3>
+          <p class="service-desc">Fast, scalable web applications built to load quickly, rank higher, and convert
+            better. I handle everything from the database to the frontend.</p>
+          <div class="service-tags" aria-label="Technologies used">
+            <span>React</span><span>Node.js</span><span>TailwindCSS</span><span>MySQL</span>
+          </div>
+          <div class="service-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M7 17l9.2-9.2M17 17V7H7" />
+            </svg>
+          </div>
+        </article>
+
+        <article class="service-card reveal" style="--delay:0.1s" data-tilt aria-label="WordPress and CMS service">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2" />
+              <path d="M20 6v28M6 20h28M10 10l20 20M30 10L10 30" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" opacity="0.4" />
+            </svg>
+          </div>
+          <div class="service-number" aria-hidden="true">02</div>
+          <h3 class="service-title">SEO Optimization for Growth</h3>
+          <p class="service-desc">Get found on Google and turn traffic into paying customers. I optimise site structure,
+            speed, and content so your business shows up where it matters.</p>
+          <div class="service-tags" aria-label="Technologies used">
+            <span>Technical SEO</span><span>WordPress</span><span>Performance</span>
+          </div>
+          <div class="service-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M7 17l9.2-9.2M17 17V7H7" />
+            </svg>
+          </div>
+        </article>
+
+        <article class="service-card reveal" style="--delay:0.2s" data-tilt aria-label="Web Design service">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect x="6" y="6" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2" />
+              <circle cx="15" cy="16" r="3" stroke="currentColor" stroke-width="2" />
+              <path d="M6 28l8-8 6 6 4-4 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="service-number" aria-hidden="true">03</div>
+          <h3 class="service-title">Web Design That Converts</h3>
+          <p class="service-desc">Websites designed to turn visitors into clients. Every layout, colour, and line of
+            copy is crafted with one goal in mind: your business growth.</p>
+          <div class="service-tags" aria-label="Technologies used">
+            <span>Figma</span><span>UI Design</span><span>Responsive</span>
+          </div>
+          <div class="service-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M7 17l9.2-9.2M17 17V7H7" />
+            </svg>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-cta reveal" style="--delay:0.25s">
+        <a href="#contact" class="btn btn-primary btn-lg magnetic">
+          <span>Work With Me</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17l9.2-9.2M17 17V7H7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       PROJECTS
+  ════════════════════════════════════════════════════════ -->
+  <section id="projects" class="section projects" aria-labelledby="projects-heading">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="section-tag" aria-hidden="true">03 / Projects</span>
+        <h2 class="section-title" id="projects-heading">Selected Work</h2>
+        <p class="section-sub reveal" style="--delay:0.1s">Real businesses. Real results. Every project is built to
+          perform.</p>
+      </header>
+
+      <!-- Cards injected by JS — see main.js projectsData -->
+      <div class="projects-grid" id="projects-grid" aria-label="Project portfolio grid"></div>
+
+      <div class="section-cta reveal" style="--delay:0.25s">
+        <a href="#contact" class="btn btn-ghost btn-lg magnetic">
+          <span>Work With Me</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17l9.2-9.2M17 17V7H7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       PRICING
+  ════════════════════════════════════════════════════════ -->
+  <section id="pricing" class="section pricing" aria-labelledby="pricing-heading">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="section-tag" aria-hidden="true">02 / Pricing</span>
+        <h2 class="section-title" id="pricing-heading">Investment</h2>
+        <p class="section-sub reveal" style="--delay:0.1s">Clear, honest pricing. No hidden fees, just clean code,
+          professional design, and a result you're proud of.</p>
+      </header>
+
+      <div class="currency-switcher reveal" style="--delay:0.12s">
+        <span class="currency-label">Currency:</span>
+        <div class="currency-select-wrap">
+          <select id="currency-select" class="currency-select" aria-label="Select display currency">
+            <option value="USD" selected>USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="ILS">ILS (₪)</option>
+            <option value="JOD">JOD (JD)</option>
+          </select>
+          <svg class="currency-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Starter -->
+        <article class="pricing-card reveal" data-tilt aria-label="Starter Website Kit pricing">
+          <div class="pricing-name">Starter Website Kit</div>
+          <div class="pricing-price" data-usd="800"><span class="price-amount">From $800</span><span> / project</span>
+          </div>
+          <p class="pricing-desc">Perfect for small businesses that need a clean, fast, professional website without the
+            agency price tag.</p>
+          <ul class="pricing-features">
+            <li>Modern responsive website</li>
+            <li>Up to 5 pages</li>
+            <li>Basic SEO optimization</li>
+            <li>Clean UI and professional design</li>
+            <li>Fast loading performance</li>
+            <li>Contact form integration</li>
+          </ul>
+          <a href="https://cal.com/jacob-qumsiyeh-czrzyt" target="_blank" rel="noopener noreferrer"
+            class="btn btn-ghost btn-full pricing-cta magnetic">
+            <span>Book a Free 30-Min Initial Call</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17l9.2-9.2M17 17V7H7" />
+            </svg>
+          </a>
+        </article>
+
+        <!-- Premium -->
+        <article class="pricing-card pricing-card--featured reveal" style="--delay:0.1s" data-tilt
+          aria-label="Premium Website Kit pricing">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-name">Premium Website Kit</div>
+          <div class="pricing-price" data-usd="1500"><span class="price-amount">From $1,500</span><span> /
+              project</span></div>
+          <p class="pricing-desc">For businesses serious about growth. Custom design, advanced SEO, and
+            conversion-focused development that pays for itself.</p>
+          <ul class="pricing-features">
+            <li>Fully custom website design</li>
+            <li>Up to 10 pages</li>
+            <li>Advanced SEO optimization</li>
+            <li>Performance optimization</li>
+            <li>Conversion-focused design</li>
+            <li>Contact form and integrations</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="https://cal.com/jacob-qumsiyeh-czrzyt" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary btn-full pricing-cta magnetic">
+            <span>Book a Free 30-Min Initial Call</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17l9.2-9.2M17 17V7H7" />
+            </svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SKILLS
+  ════════════════════════════════════════════════════════ -->
+  <section id="skills" class="section skills" aria-labelledby="skills-heading">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="section-tag" aria-hidden="true">04 / Skills</span>
+        <h2 class="section-title" id="skills-heading">Tools of the Trade</h2>
+      </header>
+
+      <div class="skills-grid">
+
+        <!-- Frontend ───────────────────────── -->
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              aria-hidden="true">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+            Frontend
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-html5-plain colored skill-icon" aria-hidden="true"></i>HTML5
+                </span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
+                aria-label="HTML5 proficiency 95%">
+                <div class="skill-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-css3-plain colored skill-icon" aria-hidden="true"></i>CSS3
+                </span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"
+                aria-label="CSS3 proficiency 92%">
+                <div class="skill-fill" data-width="92"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-javascript-plain colored skill-icon" aria-hidden="true"></i>JavaScript
+                </span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"
+                aria-label="JavaScript proficiency 88%">
+                <div class="skill-fill" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-react-original colored skill-icon" aria-hidden="true"></i>React
+                </span>
+                <span class="skill-pct">82%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"
+                aria-label="React proficiency 82%">
+                <div class="skill-fill" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-tailwindcss-plain skill-icon" style="color:#38bdf8"
+                    aria-hidden="true"></i>TailwindCSS
+                </span>
+                <span class="skill-pct">78%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"
+                aria-label="TailwindCSS proficiency 78%">
+                <div class="skill-fill" data-width="78"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend ────────────────────────── -->
+        <div class="skill-group reveal" style="--delay:0.1s">
+          <h3 class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              aria-hidden="true">
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+            </svg>
+            Backend
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-nodejs-plain colored skill-icon" aria-hidden="true"></i>Node.js
+                </span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                aria-label="Node.js proficiency 80%">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-mysql-plain colored skill-icon" aria-hidden="true"></i>MySQL
+                </span>
+                <span class="skill-pct">78%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"
+                aria-label="MySQL proficiency 78%">
+                <div class="skill-fill" data-width="78"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-postgresql-plain colored skill-icon" aria-hidden="true"></i>PostgreSQL
+                </span>
+                <span class="skill-pct">72%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"
+                aria-label="PostgreSQL proficiency 72%">
+                <div class="skill-fill" data-width="72"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Platforms ──────────────── -->
+        <div class="skill-group reveal" style="--delay:0.2s">
+          <h3 class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              aria-hidden="true">
+              <path
+                d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+            </svg>
+            Tools &amp; Platforms
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-wordpress-plain colored skill-icon" aria-hidden="true"></i>WordPress
+                </span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                aria-label="WordPress proficiency 85%">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-figma-plain colored skill-icon" aria-hidden="true"></i>Figma
+                </span>
+                <span class="skill-pct">76%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"
+                aria-label="Figma proficiency 76%">
+                <div class="skill-fill" data-width="76"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-git-plain colored skill-icon" aria-hidden="true"></i>Git
+                </span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"
+                aria-label="Git proficiency 88%">
+                <div class="skill-fill" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <i class="devicon-github-original skill-icon skill-icon--github" aria-hidden="true"></i>GitHub
+                </span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                aria-label="GitHub proficiency 85%">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-tilt>
+              <div class="skill-head">
+                <span class="skill-name">
+                  <!-- VPS / Server icon -->
+                  <svg class="skill-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="color:#e63946" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="8" rx="2" />
+                    <rect x="2" y="14" width="20" height="8" rx="2" />
+                    <line x1="6" y1="6" x2="6.01" y2="6" />
+                    <line x1="6" y1="18" x2="6.01" y2="18" />
+                  </svg>
+                  VPS (Contabo)
+                </span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                aria-label="VPS Contabo proficiency 70%">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.skills-grid -->
+
+      <div class="section-cta reveal" style="--delay:0.25s">
+        <a href="#contact" class="btn btn-ghost btn-lg magnetic">
+          <span>Contact Me</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17l9.2-9.2M17 17V7H7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════════════════════ -->
+  <section id="about" class="section about" aria-labelledby="about-heading">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="section-tag" aria-hidden="true">05 / About</span>
+        <h2 class="section-title" id="about-heading">Who I Am</h2>
+      </header>
+
+      <div class="about-grid">
+
+        <!-- Bio ──────────────────────────────── -->
+        <div class="about-bio">
+          <p class="about-text reveal">
+            I'm <strong>Jacob Qumsiyeh</strong>, a Full Stack Developer focused on one thing: building websites that
+            bring businesses more clients. I combine clean engineering with strategic design to create sites that don't
+            just look good. They perform.
+          </p>
+          <p class="about-text reveal" style="--delay:0.1s">
+            I approach every project like a Formula 1 team: precision engineering, zero wasted effort, and peak
+            performance under pressure. Every pixel and line of code is there for a reason: to grow your business.
+          </p>
+
+          <!-- Stats ──────────────────────────── -->
+          <div class="about-stats reveal" style="--delay:0.2s">
+            <div class="stat">
+              <div class="stat-inner">
+                <span class="stat-num" data-target="2">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-label">Yrs Experience</span>
+            </div>
+            <div class="stat">
+              <div class="stat-inner">
+                <span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-label">Projects Shipped</span>
+            </div>
+            <div class="stat">
+              <div class="stat-inner">
+                <span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+
+          <div class="section-cta section-cta--left reveal" style="--delay:0.3s">
+            <a href="#contact" class="btn btn-primary magnetic">
+              <span>Work With Me</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17l9.2-9.2M17 17V7H7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Code Window ──────────────────────── -->
+        <div class="about-code reveal" style="--delay:0.15s">
+          <div class="about-photo-wrap">
+            <div class="about-photo">
+              <img src="https://jacobqum.dev/assets/Jacob.jpg" alt="Jacob Qumsiyeh, Full Stack Developer"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="code-window">
+            <div class="code-window-bar">
+              <div class="code-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="code-filename">developer.js</span>
+              <div class="code-lang-badge">JS</div>
+            </div>
+            <pre class="code-block"
+              aria-label="Developer profile in code"><code
+><span class="cs-comment">// Status: Open to work ✓</span>
+<span class="cs-keyword">const</span> <span class="cs-var">jacob</span> <span class="cs-op">=</span> <span class="cs-keyword">new</span> <span class="cs-fn">Developer</span>({
+  <span class="cs-key">name</span><span class="cs-op">:</span>      <span class="cs-str">"Jacob Qumsiyeh"</span><span class="cs-op">,</span>
+  <span class="cs-key">role</span><span class="cs-op">:</span>      <span class="cs-str">"Full Stack Developer"</span><span class="cs-op">,</span>
+  <span class="cs-key">location</span><span class="cs-op">:</span>  <span class="cs-str">"Available Worldwide"</span><span class="cs-op">,</span>
+  <span class="cs-key">stack</span><span class="cs-op">:</span>     [<span class="cs-str">"React"</span><span class="cs-op">,</span> <span class="cs-str">"Node.js"</span><span class="cs-op">,</span>
+             <span class="cs-str">"WordPress"</span><span class="cs-op">,</span> <span class="cs-str">"Tailwind"</span>]<span class="cs-op">,</span>
+  <span class="cs-key">available</span><span class="cs-op">:</span> <span class="cs-bool">true</span><span class="cs-op">,</span>
+  <span class="cs-key">coffee</span><span class="cs-op">:</span>    <span class="cs-bool">always</span><span class="cs-op">,</span>
+})<span class="cs-op">;</span>
+
+<span class="cs-var">jacob</span><span class="cs-op">.</span><span class="cs-fn">build</span>(<span class="cs-str">"your next project"</span>)<span class="cs-op">;</span></code></pre>
+          </div>
+        </div>
+
+      </div><!-- /.about-grid -->
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════════════════════ -->
+  <section id="contact" class="section contact" aria-labelledby="contact-heading">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="section-tag" aria-hidden="true">06 / Contact</span>
+        <h2 class="section-title" id="contact-heading">Let's Build Together</h2>
+        <p class="section-sub reveal" style="--delay:0.1s">
+          Have a project in mind? Tell me about it and I'll get back to you within 24 hours.
+        </p>
+      </header>
+
+      <div class="contact-grid">
+
+        <!-- Contact Form ──────────────────── -->
+        <form class="contact-form reveal" id="contact-form" novalidate aria-label="Contact form, send Jacob a message">
+          <div class="form-group">
+            <input type="text" id="c-name" name="name" class="form-input" placeholder=" " required autocomplete="name"
+              aria-required="true">
+            <label for="c-name" class="form-label">Your Name</label>
+            <div class="form-line" aria-hidden="true"></div>
+            <span class="form-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="c-email" name="email" class="form-input" placeholder=" " required
+              autocomplete="email" aria-required="true">
+            <label for="c-email" class="form-label">Email Address</label>
+            <div class="form-line" aria-hidden="true"></div>
+            <span class="form-error" role="alert"></span>
+          </div>
+          <div class="form-group form-group--select">
+            <label for="c-service" class="form-label-fixed">What can I help you with?</label>
+            <div class="form-select-wrapper">
+              <select id="c-service" name="service" class="form-input form-select">
+                <option value="">Select a service</option>
+                <option value="new-website">New Website</option>
+                <option value="redesign">Website Redesign</option>
+                <option value="seo">SEO Consultation</option>
+                <option value="full-solution">Full Website Project</option>
+                <option value="discuss">General Inquiry</option>
+              </select>
+              <svg class="form-select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+            <div class="form-line" aria-hidden="true"></div>
+          </div>
+          <div class="form-hints">
+            <p class="form-hints-title">To help me respond faster, consider including:</p>
+            <ul class="form-hints-list">
+              <li>What problem are you trying to solve?</li>
+              <li>What kind of website or project do you need?</li>
+              <li>Do you already have an existing website?</li>
+              <li>What is your ideal timeline?</li>
+            </ul>
+          </div>
+          <div class="form-group">
+            <textarea id="c-msg" name="message" class="form-input form-textarea" placeholder=" " rows="5" required
+              aria-required="true"></textarea>
+            <label for="c-msg" class="form-label">Your Message</label>
+            <div class="form-line" aria-hidden="true"></div>
+            <span class="form-error" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-lg magnetic" id="form-submit"
+            aria-label="Submit contact form">
+            <span id="submit-label">Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+            </svg>
+          </button>
+          <!-- Toast notification -->
+          <div id="form-toast" class="form-toast" role="status" aria-live="polite"></div>
+        </form>
+
+        <!-- Contact Info ──────────────────── -->
+        <aside class="contact-info reveal" style="--delay:0.15s" aria-label="Contact information">
+          <div class="contact-card">
+            <h3>Ready to grow your business?</h3>
+            <p>Send a message or book a quick call. I respond within 24 hours and I'm always happy to talk through your
+              project before we start anything.</p>
+
+            <div class="contact-details">
+              <a href="mailto:qumsiyeh37@gmail.com" class="contact-row" aria-label="Email Jacob">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <strong>qumsiyeh37@gmail.com</strong>
+                </div>
+              </a>
+              <a href="https://wa.me/972597298205" class="contact-row" target="_blank" rel="noopener noreferrer"
+                aria-label="Message Jacob on WhatsApp">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="contact-label">WhatsApp</span>
+                  <strong>+972 59 729 8205</strong>
+                </div>
+              </a>
+              <div class="contact-row">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12,6 12,12 16,14" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="contact-label">Availability</span>
+                  <strong>Open to work ✓</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Schedule a Call -->
+            <a href="https://cal.com/jacob-qumsiyeh-czrzyt" target="_blank" rel="noopener noreferrer"
+              class="btn btn-ghost btn-full contact-cal-btn magnetic" aria-label="Schedule a free call with Jacob">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+              <span>Book a Free 30-Min Initial Call</span>
+            </a>
+
+            <!-- Social icon grid -->
+            <div class="contact-social" aria-label="Social media links">
+              <a href="https://github.com/Jacob11Q1" class="contact-social-link" aria-label="GitHub profile"
+                target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/yacoub-qumseya-9227a2132/" class="contact-social-link"
+                aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/jacob.web11/" class="contact-social-link"
+                aria-label="Instagram profile" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+              </a>
+              <a href="https://wa.me/972597298205" class="contact-social-link" aria-label="WhatsApp" target="_blank"
+                rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       FAQ
+  ════════════════════════════════════════════════════════ -->
+  <section id="faq" class="section faq" aria-labelledby="faq-heading">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="section-tag" aria-hidden="true">07 / FAQ</span>
+        <h2 class="section-title" id="faq-heading">Common Questions</h2>
+        <p class="section-sub reveal" style="--delay:0.1s">Everything clients usually ask before we start working
+          together.</p>
+      </header>
+
+      <div class="faq-list reveal" style="--delay:0.15s">
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What's your process from start to finish?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>We start with a free call to understand your goals, then I send a proposal covering scope, timeline,
+              and price. Once approved, I build in stages and share progress along the way, so you're never waiting
+              in the dark. After you approve the final result, I handle launch and a short handover.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How long does a typical project take?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>A Starter site usually takes 1-2 weeks, and a Premium build takes 3-5 weeks depending on scope and how
+              quickly feedback comes back. I'll give you a firm timeline once we've scoped the project on our call.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What payment methods do you accept?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>I accept bank transfer, Wise, and PayPal, with pricing shown in your local currency using the switcher
+              on the Pricing section above. Most projects run on a 50% deposit to begin and 50% on delivery; larger
+              projects can be split into milestones.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Do you offer support after the site launches?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes. Every project includes a short bug-fix window after launch, and I offer ongoing maintenance and
+              update plans for clients who want their site actively looked after. Just ask on the call.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Do I need to already have a domain or hosting?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>No. If you don't have a domain or hosting yet, I'll guide you through picking and setting them up as
+              part of the project. If you already have them, I'll just need access to connect everything.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Can you work with clients outside your timezone?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Absolutely, I work with clients worldwide and stay flexible with async updates via email or WhatsApp,
+              with calls scheduled at a time that works for both of us.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="section-cta reveal" style="--delay:0.25s">
+        <a href="https://cal.com/jacob-qumsiyeh-czrzyt" target="_blank" rel="noopener noreferrer"
+          class="btn btn-primary btn-lg magnetic">
+          <span>Still Have Questions? Book a Free Call</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17l9.2-9.2M17 17V7H7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <!-- Main footer grid -->
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="Back to top, Jacob Qumsieh">JQ</a>
+          <p class="footer-bio">Full Stack Developer building fast, high-converting websites for businesses worldwide.
+            Clean code, strategic design, and results that actually move the needle.</p>
+          <a href="https://cal.com/jacob-qumsiyeh-czrzyt" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary footer-cal-btn magnetic" aria-label="Book a free consultation call">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            <span>Book a Free 30-Min Initial Call</span>
+          </a>
+        </div>
+
+        <!-- Quick links -->
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#hero" class="footer-nav-link">Home</a></li>
+            <li><a href="#services" class="footer-nav-link">Services</a></li>
+            <li><a href="#projects" class="footer-nav-link">Projects</a></li>
+            <li><a href="#pricing" class="footer-nav-link">Pricing</a></li>
+            <li><a href="#faq" class="footer-nav-link">FAQ</a></li>
+            <li><a href="#contact" class="footer-nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Connect -->
+        <div class="footer-connect">
+          <h4 class="footer-col-title">Connect</h4>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://github.com/Jacob11Q1" class="social-link" aria-label="GitHub" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/yacoub-qumseya-9227a2132/" class="social-link" aria-label="LinkedIn"
+              target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/jacob.web11/" class="social-link" aria-label="Instagram" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/972597298205" class="social-link" aria-label="WhatsApp" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+            </a>
+          </div>
+          <a href="mailto:qumsiyeh37@gmail.com" class="footer-email">qumsiyeh37@gmail.com</a>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Jacob Qumsieh.
+          <span class="footer-copy-sep" aria-hidden="true">·</span>
+          Built with passion.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════
+       PROJECT MODAL (Case Study)
+  ════════════════════════════════════════════════════════ -->
+  <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+    aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-container">
+      <button class="modal-close" id="modal-close" aria-label="Close case study">&times;</button>
+      <div class="modal-scroll">
+        <div class="modal-header">
+          <span class="modal-category" id="modal-category"></span>
+          <h2 class="modal-title" id="modal-title"></h2>
+          <p class="modal-desc" id="modal-desc"></p>
+          <div class="modal-tech" id="modal-tech"></div>
+          <a href="#" class="btn btn-primary" id="modal-link" target="_blank" rel="noopener noreferrer">
+            <span>Visit Project</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+            </svg>
+          </a>
+        </div>
+        <div class="modal-case">
+          <div class="case-item">
+            <h4>Problem</h4>
+            <p id="modal-problem"></p>
+          </div>
+          <div class="case-item">
+            <h4>Solution</h4>
+            <p id="modal-solution"></p>
+          </div>
+          <div class="case-item">
+            <h4>Design Thinking</h4>
+            <p id="modal-design"></p>
+          </div>
+          <div class="case-item">
+            <h4>Result</h4>
+            <p id="modal-result"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Three.js (particle hero) then main.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="js/main.js?v=18" defer></script>
+</body>
+
+</html>

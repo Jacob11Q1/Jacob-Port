@@ -1030,7 +1030,6 @@ button {
 .section-tag {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
   font-weight: 700;
@@ -1038,14 +1037,6 @@ button {
   text-transform: uppercase;
   color: var(--red);
   margin-bottom: 14px;
-}
-
-.section-tag::before {
-  content: '';
-  width: 20px;
-  height: 1px;
-  background: var(--red);
-  flex-shrink: 0;
 }
 
 .section-title {

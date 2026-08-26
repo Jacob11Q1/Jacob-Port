@@ -1584,7 +1584,15 @@ button {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   gap: 22px;
+}
+
+/* Diagonal/staggered rhythm — alternating cards sit lower, echoing an
+   editorial cascade instead of a uniform grid. Reset on narrower
+   layouts where the grid collapses to a single column. */
+.project-card:nth-child(even) {
+  margin-top: 64px;
 }
 
 /* Base card styles — JS appends these to DOM */
@@ -1669,15 +1677,13 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  font-family: var(--font-mono);
   font-size: var(--text-2xs);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--red);
-  background: var(--red-dim);
-  padding: 3px 10px;
-  border-radius: 100px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .project-title {
@@ -2249,6 +2255,10 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .project-card:nth-child(even) {
+    margin-top: 0;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 56px;
@@ -2272,6 +2282,10 @@ button {
 
   .hamburger {
     display: flex;
+  }
+
+  .project-card-img {
+    height: 220px;
   }
 
   .hero-title {
@@ -2490,7 +2504,7 @@ button {
 /* ── 23. Project Card Image ──────────────────────── */
 .project-card-img {
   width: 100%;
-  height: 200px;
+  height: 280px;
   overflow: hidden;
   position: relative;
   border-bottom: 1px solid var(--border);

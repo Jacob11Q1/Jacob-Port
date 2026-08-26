@@ -21,7 +21,7 @@ This site is the primary sales asset for Jacob's freelance web development work:
 - **FAQ accordion** — native `<details>`/`<summary>`, no JS required, fully accessible
 - **Contact form** — client-side validated, submits via [FormSubmit](https://formsubmit.co) AJAX (no backend needed)
 - **Custom cursor, magnetic buttons, scroll-reveal animations** — desktop-only, degrade gracefully on touch
-- **Testimonials section** — ready to go live once real client quotes replace the placeholder copy (see [Customizing](#customizing))
+- **"How I Work" process section** — a 4-step breakdown (Discovery Call → Design & Build → Review & Refine → Launch & Support) instead of fabricated client testimonials; swap in real client quotes once you have them (see [Customizing](#customizing))
 - **Long-form case studies** — one standalone article per project (`case-study-*.html`), each linked from its project modal, each with its own `Article` JSON-LD, for SEO depth
 - **Custom branded 404 page**
 - **Compressed WebP images** — all project screenshots and the headshot converted from PNG/JPG to WebP (~87% smaller on average, same visual quality)
@@ -54,7 +54,7 @@ No package manager, no build step — open `index.html` and it runs.
 ├── case-study-*.html               # One standalone long-form article per project (4 total)
 ├── og-banner-generator.html        # Dev tool: renders/exports the OG banner (not linked from the site)
 ├── css/
-│   └── styles.css                   # All styles, numbered section comments (1. Design Tokens → 33. Testimonials)
+│   └── styles.css                   # All styles, numbered section comments (1. Design Tokens → 33. Process / How I Work)
 ├── js/
 │   └── main.js                       # All behavior, one init function per feature (see file header)
 ├── assets/
@@ -70,7 +70,7 @@ No package manager, no build step — open `index.html` and it runs.
 1. **Hero** — headline, positioning statement, primary CTAs
 2. **Services** — 3 core offerings (Web Development, SEO, Web Design)
 3. **Projects** — case-study cards, click to open a modal (data lives in `js/main.js` → `projectsData`); every project links out to its own full write-up via `caseStudyUrl`
-4. **Testimonials** — client quotes (currently placeholder copy, see [Customizing](#customizing))
+4. **How I Work** — a 4-step process breakdown (Discovery Call, Design & Build, Review & Refine, Launch & Support) — built as an honest trust-builder instead of fabricated testimonials, since there are no real client quotes yet (see [Customizing](#customizing))
 5. **Pricing** — Starter / Premium tiers with a live currency switcher
 6. **Skills** — animated proficiency bars, grouped by Frontend / Backend / Tools
 7. **About** — bio, stats counters, code-style profile card
@@ -96,7 +96,7 @@ Then open the printed local URL. Opening `index.html` directly via `file://` wil
 | Project case studies (cards + modal data) | `js/main.js` → `projectsData` array (top of file) |
 | Case study articles (long-form) | `case-study-*.html` — one file per project, each self-contained |
 | New project images | Compress to WebP first (see [Image compression](#image-compression) below) before adding to `assets/` |
-| **Testimonials (real quotes)** | `index.html` → `#testimonials` — replace the placeholder quote, name, and role in each `.testimonial-card`, and swap the `?` avatar span for the client's initial |
+| Process steps ("How I Work") | `index.html` → `#process` — edit the 4 `.process-step` cards; once you have real client relationships, this section can be swapped back for genuine testimonials |
 | Pricing tiers & currency rates | `index.html` → `#pricing`, and `js/main.js` → `initCurrencyConverter()` |
 | FAQ questions | `index.html` → `#faq` section (`<details>` blocks) |
 | Contact form destination email | `js/main.js` → the `fetch('https://formsubmit.co/ajax/...')` call |

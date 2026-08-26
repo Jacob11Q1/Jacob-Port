@@ -50,7 +50,7 @@ No package manager, no build step — open `index.html` and it runs.
 ```
 .
 ├── index.html                     # All markup — single page, sections in DOM order
-├── 404.html                        # Custom branded error page (Cloudflare Pages picks this up automatically)
+├── 404.html                        # Custom branded error page (wire up via web server config, see Deployment)
 ├── case-study-*.html               # One standalone long-form article per project (4 total)
 ├── og-banner-generator.html        # Dev tool: renders/exports the OG banner (not linked from the site)
 ├── css/
@@ -118,20 +118,33 @@ Then delete the `node_modules`/`package-lock.json` it creates — this project h
 
 ## Deployment
 
-Static site — deploy the repo root to any static host. No environment variables or server-side configuration required.
+Static site — no environment variables or server-side configuration required, no build step to run.
 
-**This site is served via Cloudflare Pages.** For pushes to `main` to go live automatically, the Pages project for `jacobqum.dev` needs its Git integration pointed at this repo (Cloudflare dashboard → Workers & Pages → the project → Settings → Builds & deployments → connect to `Jacob11Q1/Jacob-Port`, branch `main`, build output directory `/`). Without that connection, changes here stay on GitHub only.
+**This site is served from a self-managed VPS (Contabo).** The web server (nginx/Apache) points its document root straight at a clone of this repo; there's no CI/CD — deploys are a manual `git pull` on the box:
+
+```bash
+ssh <user>@<vps-host>
+cd /path/to/jacobqum.dev
+git pull origin main
+```
+
+Two things to check on the server the first time (or after moving hosts):
+
+- **Custom 404 page** isn't automatic on a bare VPS the way it is on managed hosts — point the web server at `404.html` explicitly:
+  - nginx: `error_page 404 /404.html;` inside the `server {}` block
+  - Apache: `ErrorDocument 404 /404.html` in the vhost or an `.htaccess`
+- **`robots.txt`** ships at the repo root and needs to be served as-is (no rewrite rules eating it) — verify `https://jacobqum.dev/robots.txt` returns it after deploying.
 
 When shipping changes to `css/styles.css` or `js/main.js`, bump the `?v=` query string on their `<link>`/`<script>` tags in every HTML file that loads them, to bust cached copies for returning visitors.
 
 ## SEO Checklist
 
-- `robots.txt` — managed at the hosting/CDN layer (Cloudflare)
+- `robots.txt` — at the repo root, allows all crawlers and points to `sitemap.xml`; confirm it's actually reachable at `/robots.txt` after deploying (see [Deployment](#deployment))
 - `sitemap.xml` — at the repo root, lists the home page and all 4 case study articles; submit to Google Search Console after deploying
 - Open Graph / Twitter Card meta — in `index.html` `<head>`, pointing at `assets/og-image.png` (regenerate via `og-banner-generator.html`); each case study article has its own OG image + `Article` JSON-LD
 - JSON-LD `Person` schema on the homepage — keep `sameAs` links in sync with active social profiles
-- Analytics — Cloudflare Web Analytics hook is in place but commented out on every page; needs a beacon token from your own Cloudflare dashboard to activate (see the `<head>` comment in `index.html`)
-- Custom `404.html` — picked up automatically by Cloudflare Pages, no config needed
+- Analytics — a Cloudflare Web Analytics hook is in place but commented out on every page (works on any host, not just Cloudflare-fronted ones); needs a beacon token from a Cloudflare account to activate (see the `<head>` comment in `index.html`)
+- Custom `404.html` — needs an explicit `error_page`/`ErrorDocument` directive on the VPS's web server (see [Deployment](#deployment)), it is not automatic
 
 ## License
 

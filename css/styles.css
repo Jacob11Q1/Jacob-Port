@@ -1606,7 +1606,7 @@ button {
   position: relative;
   /* Reveal state */
   opacity: 0;
-  transform: translateY(36px);
+  transform: perspective(1400px) rotateY(0deg) translateY(36px);
   transition:
     opacity 0.8s var(--ease),
     transform 0.8s var(--ease),
@@ -1615,9 +1615,18 @@ button {
   will-change: opacity, transform;
 }
 
-.project-card.visible {
+/* Resting 3D pose once revealed — alternating tilt direction so the
+   section reads as three-dimensional even without a hover. The JS
+   hover-tilt (see main.js) takes over via inline style on interaction
+   and hands back to this pose on mouseleave. */
+.project-card.visible:nth-child(odd) {
   opacity: 1;
-  transform: translateY(0);
+  transform: perspective(1400px) rotateY(-3deg) translateY(0);
+}
+
+.project-card.visible:nth-child(even) {
+  opacity: 1;
+  transform: perspective(1400px) rotateY(3deg) translateY(0);
 }
 
 .project-card:nth-child(2) {
@@ -2259,6 +2268,11 @@ button {
     margin-top: 0;
   }
 
+  .project-card.visible:nth-child(odd),
+  .project-card.visible:nth-child(even) {
+    transform: perspective(1400px) rotateY(0deg) translateY(0);
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 56px;
@@ -2515,13 +2529,24 @@ button {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.75) saturate(0.85);
-  transition: transform 0.55s var(--ease), filter 0.45s;
+  transition: filter 0.45s;
   display: block;
+  animation: projectImgFloat 9s ease-in-out infinite;
+}
+
+.project-card:nth-child(2) .project-card-img img { animation-delay: -1.8s; }
+.project-card:nth-child(3) .project-card-img img { animation-delay: -3.6s; }
+.project-card:nth-child(4) .project-card-img img { animation-delay: -5.4s; }
+.project-card:nth-child(5) .project-card-img img { animation-delay: -7.2s; }
+
+@keyframes projectImgFloat {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.07) translateY(-8px); }
 }
 
 .project-card:hover .project-card-img img {
-  transform: scale(1.06);
   filter: brightness(0.9) saturate(1);
+  animation-duration: 4.5s;
 }
 
 /* ── 24. Form Hints ──────────────────────────────── */

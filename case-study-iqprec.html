@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>How I Built Wij Al Amar: A Restaurant Website That Fills Tables | Jacob Qumsiyeh</title>
+  <title>How I Co-Built IQPREC: An Arabic-First FPL AI Platform | Jacob Qumsiyeh</title>
   <meta name="description"
-    content="A case study on building Wij Al Amar's website, bringing a beloved Bethlehem restaurant online with a menu, gallery, and location built for discovery.">
+    content="A case study on co-founding and building IQPREC, an Arabic-first AI intelligence platform for Fantasy Premier League managers.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://jacobqum.dev/case-study-wij-al-amar.html">
+  <link rel="canonical" href="https://jacobqum.dev/case-study-iqprec.html">
 
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://jacobqum.dev/case-study-wij-al-amar.html">
-  <meta property="og:title" content="How I Built Wij Al Amar: A Restaurant Website That Fills Tables">
+  <meta property="og:url" content="https://jacobqum.dev/case-study-iqprec.html">
+  <meta property="og:title" content="How I Co-Built IQPREC: An Arabic-First FPL AI Platform">
   <meta property="og:description"
-    content="A case study on bringing a beloved Bethlehem restaurant online with a website built for local discovery.">
-  <meta property="og:image" content="https://jacobqum.dev/assets/Wij-Al-Amar.webp">
+    content="A case study on co-founding and building an Arabic-first AI intelligence platform for Fantasy Premier League managers.">
+  <meta property="og:image" content="https://jacobqum.dev/assets/IQPREC.webp">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
@@ -24,13 +24,13 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "How I Built Wij Al Amar: A Restaurant Website That Fills Tables",
-    "description": "A case study on bringing a beloved Bethlehem restaurant online with a website built for local discovery.",
-    "image": "https://jacobqum.dev/assets/Wij-Al-Amar.webp",
+    "headline": "How I Co-Built IQPREC: An Arabic-First FPL AI Platform",
+    "description": "A case study on co-founding and building an Arabic-first AI intelligence platform for Fantasy Premier League managers.",
+    "image": "https://jacobqum.dev/assets/IQPREC.webp",
     "author": { "@type": "Person", "name": "Jacob Qumsiyeh", "url": "https://jacobqum.dev/" },
     "publisher": { "@type": "Person", "name": "Jacob Qumsiyeh" },
-    "mainEntityOfPage": "https://jacobqum.dev/case-study-wij-al-amar.html",
-    "datePublished": "2026-08-25"
+    "mainEntityOfPage": "https://jacobqum.dev/case-study-iqprec.html",
+    "datePublished": "2026-08-26"
   }
   </script>
 
@@ -163,47 +163,57 @@
       <span>Back to Portfolio</span>
     </a>
 
-    <span class="article-category">Case Study &middot; Restaurant Website</span>
-    <h1 class="article-title">How I Built Wij Al Amar: A Restaurant Website That Fills Tables</h1>
+    <span class="article-category">Case Study &middot; SaaS Platform</span>
+    <h1 class="article-title">How I Co-Built IQPREC: An Arabic-First FPL AI Platform</h1>
     <div class="article-meta">
       <span>Jacob Qumsiyeh</span>
       <span>&middot;</span>
-      <span>~3 min read</span>
+      <span>~4 min read</span>
     </div>
 
-    <img class="article-hero-img" src="assets/Wij-Al-Amar.webp" alt="Wij Al Amar restaurant website" loading="lazy">
+    <img class="article-hero-img" src="assets/IQPREC.webp" alt="IQPREC Arabic-first Fantasy Premier League AI assistant dashboard" loading="lazy">
 
     <div class="article-body">
       <h2>The Challenge</h2>
-      <p>Wij Al Amar had no website at all, making a beloved Bethlehem dining spot nearly invisible to anyone
-        searching online. New customers had no way to browse the menu, see the atmosphere, or find contact details
-        before deciding to visit.</p>
+      <p>Fantasy Premier League has millions of players worldwide, including a large and growing Arab community, but
+        every serious FPL tool is built in English, for a generic audience. Ask a general AI assistant like ChatGPT
+        for advice and it doesn't know your real squad, doesn't have live FPL data, and doesn't understand what your
+        mini-league rivals are playing. The recommendations are generic, and none of it speaks to Arab managers in
+        their own language.</p>
 
       <h2>The Approach</h2>
-      <p>I designed and built a full restaurant website with dedicated sections for the menu, gallery, location, and
-        contact — optimised for mobile, since most people looking for "where to eat nearby" are searching from their
-        phone, and built with local search discoverability in mind from the start.</p>
+      <p>I co-founded IQPREC with a friend in Beit Sahour, Palestine, and built it from the ground up: no investors,
+        no outside funding, just the two of us writing the product by hand. Managers link their real FPL team ID, and
+        IQPREC layers live FPL data, exclusive Arab-community ownership data, and Claude AI-powered analysis on top,
+        delivered natively in Arabic rather than translated after the fact.</p>
+      <p>The backend runs on Node.js and Express with a self-hosted PostgreSQL database and Redis for performance,
+        validating every recommendation against the official FPL API before it reaches a manager. The frontend is a
+        React and Vite single-page app built for speed during the narrow window before every gameweek deadline.</p>
 
       <h2>Design Thinking</h2>
-      <p>The aesthetic is warm and inviting, matching the restaurant's own character. Strong imagery, clean
-        typography, and clear calls to action build appetite and confidence in first-time visitors before they've
-        even walked through the door.</p>
+      <p>Every decision in FPL happens under time pressure, right before a deadline, so the interface is built for
+        speed and clarity over decoration: a live gameweek ticker, at-a-glance captain and transfer recommendations,
+        and a dashboard that surfaces the one decision that matters most instead of burying it in menus.</p>
 
       <h2>The Result</h2>
-      <p>A professional online presence that makes it easy for new customers to discover Wij Al Amar, see what they
-        offer, and decide to visit — all before leaving the house.</p>
+      <p>IQPREC is live today, self-funded with no outside investment, with a free tier and a paid Pro tier (€15/mo
+        or €110/season) already in market. It's steadily growing within the Arab FPL community, serving AI-powered
+        captain picks, transfer advice, and lineup recommendations every single gameweek.</p>
 
       <h2>Tech Stack</h2>
       <div class="article-stack">
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>JavaScript</span>
-        <span>PHP</span>
+        <span>React</span>
+        <span>Vite</span>
+        <span>Node.js</span>
+        <span>Express</span>
+        <span>PostgreSQL</span>
+        <span>Redis</span>
+        <span>Claude AI</span>
       </div>
 
       <div class="article-cta">
-        <h3>Invisible to people searching nearby?</h3>
-        <p>If your restaurant or local business still doesn't have a real website, let's change that.</p>
+        <h3>Building a SaaS product of your own?</h3>
+        <p>Let's talk about what a fast, focused MVP or landing page would look like for your startup.</p>
         <a href="https://cal.com/jacob-qumsiyeh-czrzyt" target="_blank" rel="noopener noreferrer"
           class="btn btn-primary btn-lg">
           <span>Book a Free 30-Min Initial Call</span>

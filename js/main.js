@@ -31,8 +31,25 @@ const $$ = (s, ctx = document) => [...ctx.querySelectorAll(s)];
    ================================================================ */
 const projectsData = [
   {
-    id: 'ironpulse',
+    id: 'iqprec',
     num: '01',
+    title: 'IQPREC',
+    category: 'SaaS Platform',
+    image: 'assets/IQPREC.webp',
+    imageAlt: 'IQPREC Arabic-first Fantasy Premier League AI assistant dashboard',
+    excerpt: 'Co-founded and built an Arabic-first AI assistant for Fantasy Premier League managers: live squad analysis, transfer advice, and a growing community of Arab FPL players.',
+    description: 'IQPREC is an Arabic-first AI intelligence platform for Fantasy Premier League managers, co-founded with a friend in Beit Sahour, Palestine. It connects to a manager\'s real FPL squad and gives live, data-backed captain picks, transfer advice, and lineup recommendations, natively in Arabic.',
+    tech: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Redis', 'Claude AI'],
+    url: 'https://iqprec.com',
+    caseStudyUrl: 'case-study-iqprec.html',
+    problem: 'Arab FPL managers had no tools built for them. Generic AI assistants don\'t know a manager\'s real squad, don\'t pull live FPL data, and don\'t understand the Arab FPL community, so every recommendation was generic and none of it was in Arabic.',
+    solution: 'Co-founded and built IQPREC from scratch on a self-hosted Node.js/Express and PostgreSQL backend: a platform that links to a manager\'s real FPL team ID and layers live FPL data, Arab community ownership data, and Claude AI-powered analysis on top, delivered natively in Arabic rather than as a translation layer bolted onto an English tool.',
+    design: 'Built for speed and clarity during a live gameweek: a real-time ticker, at-a-glance captain and transfer recommendations, and a clean dashboard that surfaces the one decision that matters most before each deadline.',
+    result: 'IQPREC is live, self-funded with no outside investment, and growing steadily within the Arab FPL community, with a free tier and a paid Pro tier (€15/mo or €110/season) already in market.',
+  },
+  {
+    id: 'ironpulse',
+    num: '02',
     title: 'IronPulse',
     category: 'Landing Page',
     image: 'assets/IronPulse.webp',
@@ -49,24 +66,24 @@ const projectsData = [
   },
   {
     id: 'sanctishell',
-    num: '02',
+    num: '03',
     title: 'SanctiShell',
     category: 'eCommerce Website',
     image: 'assets/SanctiShell.webp',
-    imageAlt: 'SanctiShell eCommerce platform for religious items',
-    excerpt: 'Built a fully custom eCommerce store for a Bethlehem artisan: zero platform fees, complete ownership, and a storefront that reflects the craft.',
-    description: 'SanctiShell is a custom-built eCommerce platform for a Bethlehem artisan business. It replaced expensive third-party platforms with a fully owned store, saving recurring costs and giving complete control.',
-    tech: ['PHP 8.2', 'MySQL', 'JavaScript', 'CSS3'],
+    imageAlt: 'SanctiShell eCommerce store for handcrafted Mother-of-Pearl religious items',
+    excerpt: 'Built and self-host the online storefront for my father\'s family artisan business: a WordPress + WooCommerce store selling handcrafted Mother-of-Pearl pieces from Bethlehem, with no Shopify-style subscription fees.',
+    description: 'SanctiShell is the online storefront for my father\'s family Mother-of-Pearl artisan workshop in Bethlehem, a craft the Qumsiyeh family has practiced for generations. I built a custom WordPress theme on top of WooCommerce and self-host it on my own VPS, so the business keeps full commerce functionality without a recurring Shopify-style platform fee.',
+    tech: ['WordPress', 'WooCommerce', 'PHP', 'Self-Hosted VPS'],
     url: 'https://sanctishell.com/',
     caseStudyUrl: 'case-study-sanctishell.html',
-    problem: 'The client needed to sell handcrafted Mother-of-Pearl items online, but Shopify and similar platforms meant ongoing fees, limited customisation, and no real ownership of the storefront.',
-    solution: 'Built a fully custom eCommerce platform with product listings, a shopping cart, and a streamlined checkout. Completely owned and tailored to the client\'s brand with no monthly fees.',
-    design: 'Clean, product-focused layout that keeps the craftsmanship centre stage. Simple navigation guides customers from discovery to purchase without friction or distraction.',
-    result: 'A fully functional, fee-free eCommerce store that gives the client complete control over their products, pricing, and customer experience with no platform dependency.',
+    problem: 'My father\'s family has carved Mother-of-Pearl religious pieces in Bethlehem for generations, but the craft had no online presence: every sale depended on foot traffic and word of mouth, with no way for buyers outside the Holy Land to find or purchase the work.',
+    solution: 'Built a custom WooCommerce storefront on WordPress, self-hosted on my own VPS: full product catalog, cart, and checkout for the collection (crosses, rosaries, religious gifts, jewelry), owned outright instead of rented from a platform like Shopify, so the business keeps its full margin on every sale with no monthly subscription.',
+    design: 'A quiet, reverent aesthetic that lets the craftsmanship speak for itself: warm imagery, generous whitespace, and a product-first layout that carries the weight of a decades-old family tradition without feeling like a generic e-commerce template.',
+    result: 'A real, self-hosted online store for a family business that previously had none, live and taking orders with zero recurring platform fees.',
   },
   {
     id: 'wijalamr',
-    num: '03',
+    num: '04',
     title: 'Wij Al Amar',
     category: 'Restaurant Website',
     image: 'assets/Wij-Al-Amar.webp',
@@ -83,7 +100,7 @@ const projectsData = [
   },
   {
     id: 'zuwadeh',
-    num: '04',
+    num: '05',
     title: 'Zuwadeh',
     category: 'Restaurant Website',
     image: 'assets/Zuwadeh.webp',
@@ -1023,11 +1040,10 @@ function initCurrencyConverter() {
     const rate   = rates[cur];
     const symbol = symbols[cur];
 
-    document.querySelectorAll('.pricing-price[data-usd]').forEach(el => {
-      const usd       = parseInt(el.dataset.usd, 10);
-      const converted = Math.round(usd * rate);
-      const formatted = converted.toLocaleString();
-      el.querySelector('.price-amount').textContent = `From ${symbol}${formatted}`;
+    document.querySelectorAll('.pricing-price[data-usd-low]').forEach(el => {
+      const low  = Math.round(parseInt(el.dataset.usdLow, 10) * rate).toLocaleString();
+      const high = Math.round(parseInt(el.dataset.usdHigh, 10) * rate).toLocaleString();
+      el.querySelector('.price-amount').textContent = `${symbol}${low}–${high}`;
     });
   });
 }

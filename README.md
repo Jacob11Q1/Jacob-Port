@@ -51,7 +51,7 @@ No package manager, no build step — open `index.html` and it runs.
 .
 ├── index.html                     # All markup — single page, sections in DOM order
 ├── 404.html                        # Custom branded error page (wire up via web server config, see Deployment)
-├── case-study-*.html               # One standalone long-form article per project (4 total)
+├── case-study-*.html               # One standalone long-form article per project (5 total)
 ├── og-banner-generator.html        # Dev tool: renders/exports the OG banner (not linked from the site)
 ├── css/
 │   └── styles.css                   # All styles, numbered section comments (1. Design Tokens → 33. Process / How I Work)
@@ -71,7 +71,7 @@ No package manager, no build step — open `index.html` and it runs.
 2. **Services** — 3 core offerings (Web Development, SEO, Web Design)
 3. **Projects** — case-study cards, click to open a modal (data lives in `js/main.js` → `projectsData`); every project links out to its own full write-up via `caseStudyUrl`
 4. **How I Work** — a 4-step process breakdown (Discovery Call, Design & Build, Review & Refine, Launch & Support) — built as an honest trust-builder instead of fabricated testimonials, since there are no real client quotes yet (see [Customizing](#customizing))
-5. **Pricing** — Starter / Premium tiers with a live currency switcher
+5. **Pricing** — three project-based tiers (Personal Site, Landing Page Sprint, Shopify Starter Storefront) with a live currency switcher
 6. **Skills** — animated proficiency bars, grouped by Frontend / Backend / Tools
 7. **About** — bio, stats counters, code-style profile card
 8. **FAQ** — accordion covering process, timeline, payment, support, and remote work
@@ -97,7 +97,7 @@ Then open the printed local URL. Opening `index.html` directly via `file://` wil
 | Case study articles (long-form) | `case-study-*.html` — one file per project, each self-contained |
 | New project images | Compress to WebP first (see [Image compression](#image-compression) below) before adding to `assets/` |
 | Process steps ("How I Work") | `index.html` → `#process` — edit the 4 `.process-step` cards; once you have real client relationships, this section can be swapped back for genuine testimonials |
-| Pricing tiers & currency rates | `index.html` → `#pricing`, and `js/main.js` → `initCurrencyConverter()` |
+| Pricing tiers & currency rates | `index.html` → `#pricing` (3 tiers, each priced as a range via `data-usd-low`/`data-usd-high`), and `js/main.js` → `initCurrencyConverter()` |
 | FAQ questions | `index.html` → `#faq` section (`<details>` blocks) |
 | Contact form destination email | `js/main.js` → the `fetch('https://formsubmit.co/ajax/...')` call |
 | Booking link | Any `https://cal.com/jacob-qumsiyeh-czrzyt` href across the file |
@@ -140,7 +140,7 @@ When shipping changes to `css/styles.css` or `js/main.js`, bump the `?v=` query 
 ## SEO Checklist
 
 - `robots.txt` — at the repo root, allows all crawlers and points to `sitemap.xml`; confirm it's actually reachable at `/robots.txt` after deploying (see [Deployment](#deployment))
-- `sitemap.xml` — at the repo root, lists the home page and all 4 case study articles; submit to Google Search Console after deploying
+- `sitemap.xml` — at the repo root, lists the home page and all 5 case study articles; submit to Google Search Console after deploying
 - Open Graph / Twitter Card meta — in `index.html` `<head>`, pointing at `assets/og-image.png` (regenerate via `og-banner-generator.html`); each case study article has its own OG image + `Article` JSON-LD
 - JSON-LD `Person` schema on the homepage — keep `sameAs` links in sync with active social profiles
 - Analytics — a Cloudflare Web Analytics hook is in place but commented out on every page (works on any host, not just Cloudflare-fronted ones); needs a beacon token from a Cloudflare account to activate (see the `<head>` comment in `index.html`)

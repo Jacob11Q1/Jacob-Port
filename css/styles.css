@@ -2240,6 +2240,11 @@ button {
     gap: 20px;
   }
 
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -2560,7 +2565,7 @@ button {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 

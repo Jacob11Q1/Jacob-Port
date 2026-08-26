@@ -394,6 +394,22 @@ function initScrollProgress() {
 }
 
 /* ================================================================
+   4b. BACK TO TOP
+   ================================================================ */
+function initBackToTop() {
+  const btn = $('#back-to-top');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 600);
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* ================================================================
    5. NAVIGATION
    ================================================================ */
 function initNav() {
@@ -1062,6 +1078,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initCursor();
   initScrollProgress();
+  initBackToTop();
   initNav();
   initTypewriter();
   initReveal();

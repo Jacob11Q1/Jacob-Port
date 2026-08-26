@@ -172,6 +172,70 @@ button {
   will-change: transform;
 }
 
+/* ── 4b. Back to Top ──────────────────────────────── */
+.back-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s, background 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+  box-shadow: 0 8px 28px rgba(230, 57, 70, .4);
+}
+
+/* Checkered-flag ring — a nod to the finish line */
+.back-to-top::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  padding: 1px;
+  background: repeating-conic-gradient(var(--grey-dim) 0deg 90deg, transparent 90deg 180deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+}
+
+.back-to-top:hover::before {
+  opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+  .back-to-top {
+    right: 18px;
+    bottom: 18px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
 /* ── 5. Custom Cursor ────────────────────────────── */
 .cursor-dot,
 .cursor-ring {
@@ -2818,9 +2882,47 @@ button {
 
 /* ── 28. Footer Grid ─────────────────────────────── */
 .footer {
+  position: relative;
   padding: 0;
   border-top: 1px solid var(--border);
-  background: var(--bg);
+  background:
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, .015) 0px, rgba(255, 255, 255, .015) 1px, transparent 1px, transparent 4px),
+    var(--bg);
+}
+
+/* Checkered-flag finish line — a small nod to race day */
+.footer-flag {
+  height: 8px;
+  width: 100%;
+  background-image:
+    linear-gradient(45deg, var(--grey-dim) 25%, transparent 25%, transparent 75%, var(--grey-dim) 75%),
+    linear-gradient(45deg, var(--grey-dim) 25%, transparent 25%, transparent 75%, var(--grey-dim) 75%);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+  opacity: 0.35;
+  animation: footerFlagRun 6s linear infinite;
+}
+
+@keyframes footerFlagRun {
+  from { background-position: 0 0, 4px 4px; }
+  to { background-position: 32px 0, 36px 4px; }
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-race-number {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--bg);
+  background: var(--red);
+  border-radius: var(--r-xs);
+  padding: 2px 7px;
+  letter-spacing: 0.02em;
 }
 
 .footer-grid {
@@ -2851,6 +2953,23 @@ button {
   gap: 10px;
   padding: 12px 20px;
   font-size: var(--text-sm);
+}
+
+/* Racing-stripe sweep on hover */
+.footer-cal-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -30%;
+  width: 22%;
+  background: rgba(255, 255, 255, 0.22);
+  transform: skewX(-20deg) translateX(-220%);
+  transition: transform 0.55s var(--ease);
+}
+
+.footer-cal-btn:hover::before {
+  transform: skewX(-20deg) translateX(620%);
 }
 
 .footer-col-title {

@@ -1,0 +1,27 @@
+# Jacob Qumsiyeh
+
+> Freelance full stack developer building Shopify storefronts, SaaS landing pages, and high-performance web applications for e-commerce store owners and SaaS founders.
+
+Jacob Qumsiyeh is a full stack developer based in Beit Sahour, Palestine, working with clients worldwide. He specializes in two niches: e-commerce (Shopify storefronts, WooCommerce) and SaaS/startup founders (landing pages, MVPs). Stack: React, Node.js, Express, PostgreSQL, WordPress/WooCommerce, TailwindCSS.
+
+## Services
+
+- Shopify Starter Storefront: theme setup, product loading, essential app configuration. $900-1,800, 5-7 day delivery.
+- Landing Page Sprint: a single high-converting landing page for a launch, product, or waitlist. $600-1,200, 3-5 day delivery.
+- Personal Site in a Week: a single-page portfolio site. $300-600, 2-3 day delivery.
+
+## Pages
+
+- [Portfolio home](https://jacobqum.dev/): services, pricing, process, and contact.
+- [IQPREC case study](https://jacobqum.dev/case-study-iqprec.html): co-founded Arabic-first AI platform for Fantasy Premier League managers (React, Node.js, PostgreSQL, Claude AI).
+- [SanctiShell case study](https://jacobqum.dev/case-study-sanctishell.html): self-hosted WooCommerce store for a family Mother-of-Pearl artisan business in Bethlehem.
+- [IronPulse case study](https://jacobqum.dev/case-study-ironpulse.html): conversion-focused landing page for a personal gym coach.
+- [Wij Al Amar case study](https://jacobqum.dev/case-study-wij-al-amar.html): restaurant website for a Bethlehem dining spot.
+- [Zuwadeh case study](https://jacobqum.dev/case-study-zuwadeh.html): restaurant website for a Beit Sahour café.
+
+## Contact
+
+- Email: qumsiyeh37@gmail.com
+- Booking: https://cal.com/jacob-qumsiyeh-czrzyt
+- GitHub: https://github.com/Jacob11Q1
+- LinkedIn: https://www.linkedin.com/in/yacoub-qumseya-9227a2132/
